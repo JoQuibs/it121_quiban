@@ -1,0 +1,43 @@
+<!-- 
+Jomar P. Quiban 
+05.22.2023
+HW 7 
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IT121 HW7</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<img src="usa.jpg" id="images1" alt="" onclick="changeImage()" >
+<button onclick="changeImg()">RESET</button>
+  
+<script> 
+  // click function for change of images 
+function changeImage(){
+  let displayImage = document.getElementById('images1')
+  if(displayImage.src.match('usa.jpg')){
+    displayImage.src= 'canada.jpg'
+  } else{
+    displayImage.src= 'mexico.jpg'
+  } 
+}
+
+  // reset button
+function changeImg(){
+  var img = document.getElementById('images1');
+  img.src = 'usa.jpg'
+}
+
+</script>
+
+</body>
+
+</html>

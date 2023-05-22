@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+img:hover{
+  cursor: pointer;
+}
+img:active{
+  transform: scale(0.8);
+}
+
+body{
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
