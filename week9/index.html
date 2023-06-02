@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IT121 HW9</title>
+</head>
+
+<body>
+    <textarea id="txt1" name="txtarea" cols="50" rows="2"></textarea>
+    <button id="btn">Get</button>
+    <textarea id="txt2" name="txtarea2" cols="50" rows="2"></textarea>
+    <script>
+        const t1 = document.querySelector('#txt1')
+        const t2 = document.querySelector('#txt2')
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click', (e) => {
+            let t1value = t1.value;
+            holder = t1value.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/g)
+            unique_emails = []
+            for (email of holder) {
+                if (unique_emails.includes(email)) {}
+                else unique_emails.push(email)
+            }
+            let final_string = unique_emails.join(',')
+            t2.value = final_string
+        })
+    </script>
+</body>
+
+</html>
