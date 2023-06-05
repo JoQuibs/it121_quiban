@@ -1,0 +1,27 @@
+<!-- 
+Jomar P. Quiban 
+06.05.2023
+HW 10 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>IT121 HW10</title>
+    </head>
+  
+    <body>
+      <p id="fact"></p>
+      <button onclick="generate()">MEOW</button>
+    </body>
+    <script>
+      const generate = () =>{
+      fetch("https://catfact.ninja/fact")
+      .then(response => response.json())
+      .then(result => result.fact)
+      .then(fact => document.getElementById("fact")
+      .innerText = fact
+      );
+      }
+    </script>    
+</html>
